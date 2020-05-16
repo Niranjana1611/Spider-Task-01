@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bubble</title>
+	<style>
+		
+body {
+	position: fixed inline;
+	background:black;
+}
+
+.text {
+  font-size: 72px;
+  background: -webkit-linear-gradient(lightblue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para {
+  background: -webkit-linear-gradient(45deg,yellow,lightgreen, lightblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #fff;    }
+    49%{    color: cyan; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #0ff;    }
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+</style>
+</head>
+<body onload="menu.play()">
+	<center><h1 class="text">SAVE MY RELATIONSHIP!</h1><h1>&#128526;</h1></center><br>
+	<center>
+		<h3 style="color:white" class="para">This is a fun burst bubble game! In this you have to hit a bubble to burst that,<br>and if you hit outside the bubble a new bubble will be generated. Your scores will be calculated based<br>on the number of bubbles you hit! As the time increases, the speed of the bubble will be<br>increased. When 75% of your screen gets filled with bubbles, the timer will start for<br>10 seconds. Then your game will end. You will have the pause button<br>on the top left corner and your scores will be update in the top left corner!</h3>
+		<br><h2 style="color:white"><span class="blinking">HAPPY GAMING!!!</span></h2><br>
+		<h4 style="color:white">Click here &#128071; to start your game</h4>
+		<a style="text-decoration:none" href="collision.html"><h2 class="rotate">&#9917;</h2></a>
+</center>
+
+</body>
+	<script>
+		var menu = new Audio();
+		menu.src="GameMenu.mp3";
+	</script>
+	</html>
